@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Tyuiu.NovikovNS.Sprint3.Task0.V14.Lib;
+using Tyuiu.NovikovNS.Sprint3.Task2.V19.Lib;
 
-namespace Tyuiu.NovikovNS.Sprint3.Task0
+namespace Tyuiu.NovikovNS.Sprint3.Task2.V19
 {
     class Program
     {
@@ -16,30 +16,26 @@ namespace Tyuiu.NovikovNS.Sprint3.Task0
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #3                                                               *");
             Console.WriteLine("* Тема: Создания итогового решения по спринту                             *");
-            Console.WriteLine("* Задание #0                                                              *");
-            Console.WriteLine("* Вариант #14                                                             *");
+            Console.WriteLine("* Задание #2                                                              *");
+            Console.WriteLine("* Вариант #19                                                             *");
             Console.WriteLine("* Выполнил: Новиков Никита Сергеевич | ИСТНб-23-1                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу используя цикл for, которая вычисляет                *");
-            Console.WriteLine("* произведение ряда по формуле, при n = 2                                 *");
+            Console.WriteLine("* Написать программу используя цикл do...while, которая вычисляет         *");
+            Console.WriteLine("* сумму ряда по формуле                                                   *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            int value = 2;
-            int startValue = 1;
-            int stopValue = 5;
             DataService ds = new DataService();
-            Console.WriteLine("Значение n = " + value);
+            int startValue = 1;
+            int stopValue = 10;
+            double res;
 
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
-            Console.WriteLine("***************************************************************************");
+            res = ds.GetSumSeries(startValue, stopValue);
 
-            Console.WriteLine($"Произведение ряда по формуле при n = {value} равно " + ds.GetMultiplySeries(value, startValue, stopValue));
+            Console.WriteLine("Значение суммы ряда по формуле = " + res);
             Console.ReadKey();
-
         }
     }
 }

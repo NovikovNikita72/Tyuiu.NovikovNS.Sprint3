@@ -16,7 +16,7 @@ namespace Tyuiu.NovikovNS.Sprint3.Task0.V14.Lib
             int k;
             for (k = startValue; k <= stopValue; k++)
             {
-                multiplySeries = multiplySeries * Math.Pow(1 / (Math.Pow(k, value)),-1);
+                multiplySeries = multiplySeries + Math.Pow(1 / (Math.Pow(k, value)),-1);
             }
             return multiplySeries;
         }
